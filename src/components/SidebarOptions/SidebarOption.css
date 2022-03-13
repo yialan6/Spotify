@@ -1,0 +1,28 @@
+.options {
+    display: flex;
+    align-items: center;
+    color: grey;
+    height: 40px;
+    cursor: pointer;
+    transition: 180ms color ease-in;
+}
+
+.options:hover {
+    color: white;
+}
+
+.option-icon {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.options p {
+    margin-left: 18px;
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+.options h4 {
+    font-size: 15px;
+    font-weight: 625;
+}
