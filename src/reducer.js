@@ -4,6 +4,7 @@ export const initialState = {
     playing: false,
     item: null,
     token: null,
+    discover: null,
 };
 
 const reducer = (state, action) => {
@@ -23,6 +24,11 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 playlists: action.playlists,
+            }
+        case "SET_DISCOVER":
+            return {
+                ...state,
+                discover: action.discover,
             }
         default:
             return state;

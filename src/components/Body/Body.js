@@ -1,12 +1,16 @@
 import React from "react";
 import "./Body.css";
+import Header from "../Header/Header"
+import Discover from "../BodyInfo/Discover";
 
-function Body() {
+function Body({spotify}) {
     return (
         <div className="body">
-            <h1>Body</h1>
+            <Header spotify={spotify}/>
+
+            <Discover/>
         </div>
-    )
+    );
 }
 
 export default Body;

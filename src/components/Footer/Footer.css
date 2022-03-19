@@ -1,8 +1,51 @@
 .footer {
     position: fixed;
     width: 100%;
-    height: 60px;
+    height: 70px;
     bottom: 0;
     background-color: #2e2e2e;
     padding: 10px;
+    display: flex;
+}
+
+.footer-left {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+}
+
+.footer-center {
+    width: 55%;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 0 450px;
+    justify-content: space-between;
+    max-width: 150px;
+}
+
+.footer-right {
+    width: 25%;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+}
+
+#artist {
+    font-size: 12px;
+}
+
+.footer-icon:hover {
+    transition: transform 0.2s ease-in;
+    transform: scale(1.2) !important;
+}
+
+.footer-right * .MuiSlider-root {
+    color:grey;
+}
+.footer-right * .MuiSlider-root:active {
+    color:rgb(67, 189, 67);
 }

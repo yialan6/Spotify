@@ -35,6 +35,16 @@ function App() {
               playlists: playlists,
             })
         });
+
+        spotify.getPlaylist('37i9dQZEVXcHSqgCcpUaay').then(response => {
+          dispatch({
+              type: "SET_DISCOVER",
+              discover: response,
+          })
+        });
+        
+
+
       }
   }, []);
 
@@ -42,7 +52,7 @@ function App() {
     <div className="App">
       {
         token ? (
-          <Player></Player>
+          <Player spotif={spotify}></Player>
         ) : (
         <Login></Login>
         )

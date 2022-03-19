@@ -4,4 +4,9 @@
     padding: 25px;
     color: white;
     height: 100vh;
+    overflow-y: overlay;
+}
+
+.body::-webkit-scrollbar {
+    display: none;
 }

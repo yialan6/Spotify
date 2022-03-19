@@ -1,0 +1,35 @@
+.header {
+    display:flex;
+    justify-content: space-between;
+}
+
+.header-left {
+    background-color: white;
+    color: grey;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    padding: 10px;
+    min-width: 80px;
+}
+
+.header-left input {
+    border:none;
+    width: 100%;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right h4 {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.MuiAvatar-root {
+    width: 28px !important;
+    height: 28px !important;
+}

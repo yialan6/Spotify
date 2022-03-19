@@ -19,7 +19,8 @@ function Sidebar() {
                 <br/>
                 <br/>
                 <hr/>
-                {playlists?.items?.map( (playlist) => <SidebarOption title={playlist.name}/>)}
+                {playlists?.items?.map( (playlist) => 
+                <a><SidebarOption title={playlist.name}/></a>)}
             </div>
         </div>
     );
