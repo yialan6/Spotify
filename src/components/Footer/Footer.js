@@ -11,10 +11,10 @@ function Footer() {
     return (
         <div className="footer">
             <div className='footer-left'>
-                <div class='song-img'>
+                <div className='song-img'>
                     <img src='' alt='img'></img>
                 </div>
-                <div class='song-details'>
+                <div className='song-details'>
                     <h5>Name</h5>
                     <p id='artist'>Artist</p>
                 </div>

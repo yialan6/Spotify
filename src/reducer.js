@@ -5,10 +5,10 @@ export const initialState = {
     item: null,
     token: null,
     discover: null,
+    current_playlist: null,
 };
 
 const reducer = (state, action) => {
-    console.log(action);
     switch(action.type) {
         case 'SET_USER':
             return {
@@ -29,6 +29,11 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 discover: action.discover,
+            }
+        case "SET_CURRENT_PLAYLIST":
+            return {
+                ...state,
+                current_playlist: action.current_playlist,
             }
         default:
             return state;

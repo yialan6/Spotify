@@ -7,7 +7,7 @@ import LibraryMusicIcon from "@material-ui/icons/LibraryMusic"
 import { useStateProviderValue } from '../../StateProvider';
 
 
-function Sidebar() {
+function Sidebar({spotify}) {
     const [{playlists}, dispatch] = useStateProviderValue();
     return (
         <div className="sidebar">
@@ -20,7 +20,7 @@ function Sidebar() {
                 <br/>
                 <hr/>
                 {playlists?.items?.map( (playlist) => 
-                <a><SidebarOption title={playlist.name}/></a>)}
+                <SidebarOption title={playlist.name} playlist={playlist} spotify={spotify}/>)}
             </div>
         </div>
     );

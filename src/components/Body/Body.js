@@ -2,13 +2,16 @@ import React from "react";
 import "./Body.css";
 import Header from "../Header/Header"
 import Discover from "../BodyInfo/Discover";
+import UserPlaylist from "../BodyInfo/UserPlaylist"
+import { useStateProviderValue } from "../../StateProvider";
 
 function Body({spotify}) {
+    const [{current_playlist}, dispatch] = useStateProviderValue();
     return (
         <div className="body">
             <Header spotify={spotify}/>
 
-            <Discover/>
+            {current_playlist? <UserPlaylist/> : <Discover/>}
         </div>
     );
 }

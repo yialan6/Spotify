@@ -42,8 +42,6 @@ function App() {
               discover: response,
           })
         });
-        
-
 
       }
   }, []);
@@ -52,7 +50,7 @@ function App() {
     <div className="App">
       {
         token ? (
-          <Player spotif={spotify}></Player>
+          <Player spotify={spotify}></Player>
         ) : (
         <Login></Login>
         )
