@@ -11,7 +11,7 @@ function Body({spotify}) {
         <div className="body">
             <Header spotify={spotify}/>
 
-            {current_playlist? <UserPlaylist/> : <Discover/>}
+            {current_playlist? <UserPlaylist spotify={spotify}/> : <Discover spotify={spotify}/>}
         </div>
     );
 }

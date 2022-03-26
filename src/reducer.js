@@ -6,6 +6,7 @@ export const initialState = {
     token: null,
     discover: null,
     current_playlist: null,
+    curr_state: false,
 };
 
 const reducer = (state, action) => {
@@ -34,6 +35,16 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 current_playlist: action.current_playlist,
+            }
+        case "SET_ITEM":
+            return {
+                ...state,
+                item: action.item,
+            }
+        case "SET_STATE":
+            return {
+                ...state,
+                curr_state: action.curr_state,
             }
         default:
             return state;

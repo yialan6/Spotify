@@ -8,7 +8,10 @@ import { useStateProviderValue } from '../../StateProvider';
 
 
 function Sidebar({spotify}) {
-    const [{playlists}, dispatch] = useStateProviderValue();
+    const [{playlists, current_playlist}, dispatch] = useStateProviderValue();
+
+
+
     return (
         <div className="sidebar">
             <img className='logo' src='https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png'></img>

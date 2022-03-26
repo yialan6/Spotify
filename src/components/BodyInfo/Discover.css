@@ -8,10 +8,11 @@
 .info-text h4 {
     font-size: 80px;
     margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 .info-text p, strong{
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .img {

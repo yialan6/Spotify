@@ -9,6 +9,7 @@ import Player from './components/Player/Player';
 const spotify = new SpotifyWebApi;
 
 function App() {
+  const SPOTIFY_WEB_PLAYBACK_SDK_URL = "https://sdk.scdn.co/spotify-player.js";
 
   const [{user, token}, dispatch] = useStateProviderValue();
 
@@ -30,6 +31,7 @@ function App() {
             })
         });
         spotify.getUserPlaylists().then((playlists) => {
+            console.log(playlists)
             dispatch({
               type: "SET_PLAYLIST",
               playlists: playlists,

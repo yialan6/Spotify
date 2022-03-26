@@ -6,16 +6,18 @@ import FavoriteIcon from "@material-ui/icons/Favorite"
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz"
 import SongRow from "./SongRow";
 
-function Discover() {
+function Discover({spotify}) {
     const [{current_playlist}, dispatch] = useStateProviderValue();
+    console.log(current_playlist)
     return (
         <div>
             <div className='body-info'>
                 <img className="img" src={current_playlist?.images[0].url} alt=""/>
                 <div className="info-text">
-                    <strong>Playlist</strong>
+                    <strong>PLAYLIST</strong>
                     <h4>{current_playlist.name}</h4>
-                    <p>{current_playlist?.description}</p>
+                    <p>{current_playlist.description} 
+                    {current_playlist.tracks.items.length} songs</p>
                 </div>
             </div>
             <div className='body-songs'>
@@ -25,7 +27,7 @@ function Discover() {
                     <MoreHorizIcon/>
                 </div>
                 {current_playlist?.tracks.items.map(item => (
-                    <SongRow track={item.track}/>
+                    <SongRow spotify={spotify} track={item.track}/>
                 ))}
             </div>
         </div>
